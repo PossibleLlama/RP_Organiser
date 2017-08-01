@@ -1,68 +1,87 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>*** Template ***</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>*** Template ***</title>
 
-  <!--
-  CSS priority
-    - Bootstrap
-    - Global
-    - Page
-    - Element
-  -->
-  <link rel="stylesheet" href="#">
-  <link rel="stylesheet" href="..\css\global.css">
-  <link rel="stylesheet" href="#">
-  <link rel="stylesheet" href="#">
+	<!--
+	CSS priority
+		- Fonts
+		- Bootstrap
+		- Global
+		- Page
+		- Element
+	-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="..\css\global.css">
+	<link rel="stylesheet" href="#">
+	<link rel="stylesheet" href="#">
 
-  <!--
-  JS priority
-    - Global
-    - Page
-    - Element
-  -->
-  <script src="..\js\global.js"></script>
+	<!--
+	JS priority
+		- Bootstrap
+		- Global
+		- Page
+		- Element
+	-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="..\js\global.js"></script>
+	<script src="#"></script>
+	<script src="#"></script>
 </head>
 <body>
-  <header role="banner">
+	<header role="banner" class="headerBanner">
 
-    <a href="html/index.html" title="Homepage">
-      <img src="..\resources\placeholderLogo.jpg" height="80" width="80" alt="Logo">
-      <h1 class="siteName">RP Organiser</h1>
-    </a>
+		<a href="html/index.html" title="Homepage">
+			<!-- <img src="..\resources\placeholderLogo.jpg" height="80" width="80" alt="Logo" > -->
+		</a>
 
-    <nav class="topNavigation">
-        <ul>
-          <li>Item1</li>
-          <li>Item2</li>
-        </ul>
-    </nav>
+		<nav class="topNavigation navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header" width-min="100">
+						<a href="html/index/html" class="navbar-brand">
+							<img src="..\resources\placeholderLogo.jpg" height="80" width="80" alt="Logo" >
+							Rp Organiser
+						</a>
+					</div>  <!-- Navbar header --> <!-- Should all be clickable, however currently not working properly -->
+					<ul class="nav navbar-nav">
+						<li><a class="navLinks" href="#">Item1</a></li>
+						<li><a class="navLinks" href="#">Item2</a></li>
+						<li><a class="navLinks" href="#">Item3</a></li>
+						<li><a class="navLinks" href="#">Item4</a></li>
+					</ul>		<!-- Navbar links -->
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+					</ul>
+				</div>
+		</nav>
 
-    <p class="breadcrumb">
-      <a href="html/index.html" title="Homepage">Home</a>
-    </p>
+		<p class="breadcrumb">
+			<a href="html/index.html" title="Homepage" class="breadcrumb">Home</a>
+		</p>
 
-  </header>
+	</header>
 
-  <main>
-    <h2>Page name</h2>
-    <p>Overview of page</p>
+	<main role="main">
+		<h2>Page name</h2>
+		<p>Overview of page</p>
 
-    <section>
-      <h3>First section</h3>
-      <p>Content</p>
-    </section>
-  </main>
+		<section>
+			<h3>First section</h3>
+			<p>Content</p>
+		</section>
+	</main>
 
-  <footer>
-    <p>Created by <a href="https://twitter.com/Possible_Llama"
-      title="Twitter account"
-      target="_blank"
-      rel="external"
-      >PossibleLlama</a>
-    </p>
-  </footer>
+	<footer role="contentinfo">
+		<p>Created by <a href="https://twitter.com/Possible_Llama"
+			title="Twitter account"
+			target="_blank"
+			rel="external"
+			>PossibleLlama</a>
+		</p>
+	</footer>
 </body>
 </html>

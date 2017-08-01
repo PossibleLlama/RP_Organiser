@@ -8,6 +8,51 @@ Colour scheme
 #1F1300 - Brown.
 */
 
+/* Global
+______________________________*/
 body {
   background-color: #DFD6A7;
 }
+
+/* Header
+______________________________*/
+.headerBanner {
+  background-color: #F7B05B;
+  font-family: 'Open Sans','Roboto', sans-serif;
+  font-weight: 600;
+  color: 1F1300;
+}
+/* Whole navbar at top of page */
+.topNavigation {
+  background-color: inherit;
+  border: solid #F7B05B;
+  padding: 20, 30;
+  margin: 5, 10;
+}
+/* Login button on right of navbar */
+.glyphicon {
+  margin-right: 6px;
+}
+/* Links to each page */
+a.navLinks {
+  color: red; /* Currently not working */
+}
+/* Breadcrumb at bottom of header */
+.breadcrumb {
+  background-color: inherit;
+  color: #1F1300;
+}
+.breadcrumb:hover {
+  color: #000;
+  font-weight: 800;
+}
+.breadcrumb:focus {
+  color: #000;
+  font-weight: 800;
+}
+/* Footer
+______________________________*/
+
+
+/* Main
+______________________________*/
