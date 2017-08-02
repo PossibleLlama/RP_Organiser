@@ -13,7 +13,10 @@ ______________________________*/
 body {
   background-color: #DFD6A7;
 }
-
+.centered {
+  width: auto;
+  margin: 0 auto;
+}
 /* Header
 ______________________________*/
 .headerBanner {
@@ -21,13 +24,16 @@ ______________________________*/
   font-family: 'Open Sans','Roboto', sans-serif;
   font-weight: 600;
   color: 1F1300;
+  width: 100%;
+  display: inline-block;
 }
 /* Whole navbar at top of page */
 .topNavigation {
   background-color: inherit;
-  border: solid #F7B05B;
-  padding: 20, 30;
-  margin: 5, 10;
+  border: 0px;
+  padding: 20px, 30px;
+  margin: 5px, 20px;
+  display: inline-block;
 }
 /* Login button on right of navbar */
 .glyphicon {
@@ -37,18 +43,26 @@ ______________________________*/
 a.navLinks {
   color: red; /* Currently not working */
 }
+.logo {
+  display: inline-block;
+  margin-left: 20px;
+}
 /* Breadcrumb at bottom of header */
 .breadcrumb {
   background-color: inherit;
   color: #1F1300;
+  margin: 5px;
+  margin-top: 25px;
 }
 .breadcrumb:hover {
   color: #000;
-  font-weight: 800;
+  font-weight: 1000;
+  text-decoration: none;
 }
 .breadcrumb:focus {
   color: #000;
-  font-weight: 800;
+  font-weight: 1000;
+  text-decoration: none;
 }
 /* Footer
 ______________________________*/
