@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
 	<title>*** Template ***</title>
 
 	<!--
@@ -26,50 +28,29 @@
 		- Page
 		- Element
 	-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="..\js\global.js"></script>
-	<script src="#"></script>
-	<script src="#"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
+	<script src="..\js\global.js" defer></script>
+	<script src="#" defer></script>
 </head>
 <body>
 	<header role="banner" class="headerBanner">
 
-		<a href="html/index.html" title="Homepage">
-			<!-- <img src="..\resources\placeholderLogo.jpg" height="80" width="80" alt="Logo" > -->
+		<a href="index.html" title="Homepage" class="">
+			<img src="..\resources\placeholderLogo.jpg" height="80" width="80" alt="Logo" class="logo">
 		</a>
 
-		<nav class="topNavigation navbar navbar-default">
-				<div class="container-fluid">
-					<div class="navbar-header" width-min="100">
-						<a href="html/index/html" class="navbar-brand">
-							Rp Organiser
-						</a>
-					</div>  <!-- Navbar header --> <!-- Should all be clickable, however currently not working properly -->
-					<ul class="nav navbar-nav">
-						<li><a class="navLinks" href="#">Item1</a></li>
-						<li><a class="navLinks" href="#">Item2</a></li>
-						<li><a class="navLinks" href="#">Item3</a></li>
-						<li><a class="navLinks" href="#">Item4</a></li>
-					</ul>		<!-- Navbar links -->
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-					</ul>
-				</div>
-		</nav>
-
-		<a href="html/index/html" class="navbar-brand">
-			<img src="..\resources\placeholderLogo.jpg"
-			height="80" width="80" alt="Logo"
-			class="logo">
+		<a href="index.html">
+			<h1 class="siteName">Rp Organiser</h1>
 		</a>
+
 		<p class="breadcrumb">
-			<a href="html/index.html" title="Homepage" class="breadcrumb">Home</a>
+			<a href="index.html" title="Homepage" class="breadcrumb">Home</a>
 		</p>
 
 	</header>
 
-	<main role="main" class="centered">
+	<main role="main">
 		<h2>Page name</h2>
 		<p>Overview of page</p>
 
@@ -79,12 +60,14 @@
 		</section>
 	</main>
 
-	<footer role="contentinfo" class="centered">
-		<p>Created by <a href="https://twitter.com/Possible_Llama"
-			title="Twitter account"
-			target="_blank"
-			rel="external"
-			>PossibleLlama</a>
+	<footer role="contentinfo">
+		<p>Created by
+			<a href="https://twitter.com/Possible_Llama"
+				title="Twitter account"
+				target="_blank"
+				rel="external">
+				PossibleLlama
+			</a>
 		</p>
 	</footer>
 </body>
