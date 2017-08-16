@@ -5,19 +5,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
+	<meta name="author" content="PossibleLlama">
+
 	<title>*** Template ***</title>
 
 	<!--
 	CSS priority
-		- Fonts
 		- Bootstrap
+		- Fonts
 		- Global
 		- Page
 		- Element
 	-->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto">
 	<!-- <link rel="stylesheet" href="..\css\global.css"> -->
 	<!-- <link rel="stylesheet" href="#"> -->
 	<!-- <link rel="stylesheet" href="#"> -->
@@ -32,33 +34,54 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
 	<script src="..\js\global.js" defer></script>
-	<script src="#" defer></script>
+	<!-- <script src="#" defer></script> -->
 </head>
 <body>
 	<header role="banner" class="headerBanner">
 
-		<div class="fluid-container">
-			<div class="row">
-				<div class="col-sm-2">
-					<a href="index.html" title="Homepage" class="">
-						<img src="..\resources\placeholderLogo.jpg" height="80" width="80" alt="Logo" class="logo">
-					</a>
-				</div>
-				<div class="jumbotron col-sm-10 text-center">
+		<nav class="navbar navbar-default">
+			<div class="fluid-container text-center">
+				<div class="navbar-header">
 					<a href="index.html">
-						<h1 class="siteName">Rp Organiser</h1>
+						<img src="..\resources/placeholderLogo.jpg"
+						alt="Logo" height="80" width="80"
+						class="text-left">
 					</a>
-				</div> <!-- Jumbotron -->
-			</div> <!-- Row -->
+					<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#collapseMenu"
+					aria-expanded="false">
+						<span class="sr-only">Toggle Navigation Bar</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand">
+						Home
+					</a>
+				</div> <!-- Navbar Header -->
+				<div class="collapse navbar-collapse" id="collapseMenu">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="pageCampaigns/listCampaigns.html">Campaigns</a>
+						</li>
+						<li>
+							<a href="pageSettings/listSettings.html">Settings</a>
+						</li>
+						<li>
+							<a href="pageCharacters/listPlayCharacters.html">Player Characters</a>
+						</li>
+						<li>
+							<a href="pageResources/resources.html">Resources</a>
+						</li>
+					</ul>
+				</div> <!-- Collapsable Navbar -->
+			</div> <!-- Fluid Container -->
+		</nav>
 
-			<div class="row">
-				<div class="col-sm-2">
-					<p class="breadcrumb">
-						<a href="index.html" title="Homepage" class="breadcrumb">Home</a>
-					</p>
-				</div> <!-- col-sm-2 -->
-			</div> <!-- Row -->
-		</div>	<!-- Fluid container -->
+		<ol class="breadcrumb">
+			<li><a href="index.html" title="Homepage">Home</a></li>
+		</ol>
+
 	</header>
 
 	<main role="main">
@@ -81,13 +104,19 @@
 
 		<div class="fluid-container text-center">
 			<div class="row">
-				<div class="col-sm-12"
+				<div class="col-sm-12">
 					<a href="https://twitter.com/Possible_Llama"
 						title="Twitter account"
 						target="_blank"
 						rel="external">
-						<i class="fa fa-twitter-square" style="font-size:24px"></i>
+						<span class="fa fa-twitter-square"
+						style="font-size:16px; padding:10px; margin:10px;"></span>
 					</a>
+					<a href="pageResources/feedback.html"
+						title="Feedback form">
+          	<span class="glyphicon glyphicon-envelope"
+						style="padding:10px; margin:10px;"></span>
+        	</a>
 				</div>
 			</div> <!-- Row -->
 		</div> <!-- Fluid container -->

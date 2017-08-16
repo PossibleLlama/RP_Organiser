@@ -47,23 +47,6 @@ img.logo {
   display: inline-block;
   margin: 20px;
 }
-/* Breadcrumb at bottom of header */
-.breadcrumb {
-  background-color: inherit;
-  color: #1F1300;
-  margin: 5px;
-  margin-top: 25px;
-}
-.breadcrumb:hover {
-  color: #000;
-  font-weight: 1000;
-  text-decoration: none;
-}
-.breadcrumb:focus {
-  color: #000;
-  font-weight: 1000;
-  text-decoration: none;
-}
 /* Footer
 ______________________________*/
 .footerBanner {
