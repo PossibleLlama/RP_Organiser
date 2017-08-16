@@ -1,56 +1,94 @@
 /*
 Colour scheme
 
-#DFD6A7 - Pale yellow/brown colour.
-#F7CE5B - Yellow.
-#F7B05B - Orange.
-#E0CA69 - Faded yellow.
-#1F1300 - Brown.
+#4A8E4A - Pale Green.
+#002400 - Dark Green.
+#3B843B - Pale/Mid Green.
+#1C631C - Mid Green.
+#D2E0D2 - Grey.
 */
 
 /* Global
 ______________________________*/
-body {
-  background-color: #DFD6A7;
+html {
+  box-sizing: border-box;
 }
-.centered {
-  display: inline-block;
-  width: 50%;
+*
+*::before
+*::after {
+  box-sizing: inherit;
+}
+a {
+  color: #002400;
+  font-weight: 500;
+}
+a:hover
+a:focus {
+  color: #002400;
+  font-weight: bold;
 }
 /* Header
 ______________________________*/
 .headerBanner {
-  background-color: #F7B05B;
+  background-color: #D2E0D2;
   font-family: 'Open Sans','Roboto', sans-serif;
   font-weight: 600;
-  color: 1F1300;
   width: 100%;
   display: inline-block;
   margin: 0px;
 }
-.siteName {
-  display: inline-block;
+.navbar {
   background-color: inherit;
-  color: #1F1300;
-  margin: 20px;
+  border: 0px;
 }
-.siteName:hover {
-  color: #000;
-  font-weight: 100;
+.navbar-collapse {
+  border: 0px;
+}
+.navbar-toggle {
+  border: 0px;
+}
+.breadcrumb {
+  background-color: inherit;
+  border: 0px;
+}
+li a {
+  color: #777;
+}
+li a:hover{
+  color: #222;
+  font-weight: bold;
   text-decoration: none;
 }
-/* Links to each page */
-a.navLinks {
-  color: red; /* Currently not working */
+.logo {
+  float: left;
 }
-img.logo {
-  display: inline-block;
-  margin: 20px;
+.navbar-brand {
+  font-size: 1.8em;
+  text-align: center;
+}
+.navbar-brand:hover
+.navbar-brand:focus {
+  color: #222;
+  font-weight: bold;
 }
 /* Footer
 ______________________________*/
 .footerBanner {
-  background-color: #F7B05B;
+  background-color: #D2E0D2;
 }
 /* Main
 ______________________________*/
+.mainBody {
+  background-color: #FFF;
+  margin: 10px;
+}
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.3em;
+}
+p {
+  font-size: 1em;
+
+}

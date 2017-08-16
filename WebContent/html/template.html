@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto">
-	<!-- <link rel="stylesheet" href="..\css\global.css"> -->
+	<link rel="stylesheet" href="..\css\global.css">
 	<!-- <link rel="stylesheet" href="#"> -->
 	<!-- <link rel="stylesheet" href="#"> -->
 
@@ -43,9 +43,11 @@
 			<div class="fluid-container text-center">
 				<div class="navbar-header">
 					<a href="index.html">
-						<img src="..\resources/placeholderLogo.jpg"
-						alt="Logo" height="80" width="80"
-						class="text-left">
+						<!-- <span style="float: left;"> -->
+							<img src="..\resources/placeholderLogo.jpg"
+							alt="Logo" height="80" width="80"
+							class="logo">
+						<!-- </span> -->
 					</a>
 					<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="#collapseMenu"
@@ -55,9 +57,11 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="index.html" class="navbar-brand">
-						Home
-					</a>
+					<span class="home">
+						<a href="index.html" class="navbar-brand">
+							RP Organiser
+						</a>
+					</span>
 				</div> <!-- Navbar Header -->
 				<div class="collapse navbar-collapse" id="collapseMenu">
 					<ul class="nav navbar-nav">
@@ -84,19 +88,50 @@
 
 	</header>
 
-	<main role="main">
+	<main role="main" class="mainBody">
 		<div class="fluid-container">
-			<div class="col-sm-12">
-				<h2>Page name</h2>
-				<p>Overview of page</p>
-			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<h1>Page name</h1>
+					<p>Overview of page</p>
+				</div>
 
-			<section>
-					<div class="col-sm-12">
-						<h3>First section</h3>
-						<p>Content</p>
-					</div>
-			</section>
+				<section>
+						<div class="col-sm-12">
+							<h2>First section</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+								Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+								natoque penatibus et magnis dis parturient montes, nascetur
+								ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+								pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+								justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
+								justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
+								dictum felis eu pede mollis pretium. Integer tincidunt. Cras
+								dapibus. Vivamus elementum semper nisi. Aenean vulputate
+								eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+								vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+								viverra quis, feugiat a, tellus. Phasellus viverra nulla ut
+								metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+								ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+								Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
+								condimentum rhoncus, sem quam semper libero, sit amet adipiscing
+								sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
+								pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
+								tincidunt tempus. Donec vitae sapien ut libero venenatis
+								faucibus. Nullam quis ante. Etiam sit amet orci eget eros
+								faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet
+								nibh. Donec sodales sagittis magna. Sed consequat, leo eget
+								bibendum sodales, augue velit cursus nunc,
+							</p>
+							<p>
+								Placeholder text obtained from <a
+								href="http://www.blindtextgenerator.com/lorem-ipsum">blind text
+								generator</a>
+							</p>
+						</div>
+				</section>
+			</div> <!-- Row -->
 		</div> <!-- Fluid container -->
 	</main>
 
