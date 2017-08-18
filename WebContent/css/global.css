@@ -12,11 +12,15 @@ Colour scheme
 ______________________________*/
 html {
   box-sizing: border-box;
+  background-color: #D2E0D2;
+}
+.fluid-container {
+  width: 100%;
 }
 *
 *::before
 *::after {
-  box-sizing: inherit;
+  box-sizing: #D2E0D2;
 }
 a {
   color: #002400;
