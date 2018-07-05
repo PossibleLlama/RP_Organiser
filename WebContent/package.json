@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/PossibleLlama/RP_Organiser/issues"
   },
-  "homepage": "https://github.com/PossibleLlama/RP_Organiser#readme"
+  "homepage": "https://github.com/PossibleLlama/RP_Organiser#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
