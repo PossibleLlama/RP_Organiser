@@ -2,6 +2,17 @@
 // http://criticalhitpodcast.wikia.com/wiki/Characters
 
 module.exports = function(app, mongoose) {
+    var Character = mongoose.model('Character'), {
+        characterName: String,
+        playerName: String,
+        group: String,
+        campaign: [String],
+        characterClass: [{String, Number}],
+        characterRace: String,
+        characterSheet: [{String, String}],
+        description, String
+    };
+
     listFromMongo = [{
         characterName : 'Torq',
         playerName : 'Matthew Peterson',
@@ -24,5 +35,6 @@ module.exports = function(app, mongoose) {
 
     app.get('/api/v1/characters', (req, res) => {
         res.send(listFromMongo);
+        var character = new Character(res.body);
     });
 }
