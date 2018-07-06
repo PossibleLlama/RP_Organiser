@@ -1,7 +1,7 @@
 // Add get requests based on search criteria.
 // http://criticalhitpodcast.wikia.com/wiki/Characters
 
-module.exports = function(app) {
+module.exports = function(app, mongoose) {
     listFromMongo = [{
         characterName : 'Torq',
         playerName : 'Matthew Peterson',
@@ -12,7 +12,14 @@ module.exports = function(app) {
         description : 'I like funnel cakes. Hit \'em with the pointy end.'
     }];
 
+    mongoose.connect(dbUrl, {useNewUrlParser : true}, (err) => {
+        if (err != null) {
+            console.log('An error occured.\n', err)
+        } else {
+            console.log('Mongo db connected.');
+        }
+    });
     app.get('/api/v1/characters', (req, res) => {
         res.send(listFromMongo);
-    })
+    });
 }
