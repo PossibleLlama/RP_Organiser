@@ -12,13 +12,16 @@ module.exports = function(app, mongoose) {
         description : 'I like funnel cakes. Hit \'em with the pointy end.'
     }];
 
-    mongoose.connect(dbUrl, {useNewUrlParser : true}, (err) => {
+    var databaseConfigs = require('./../resources/mlabDatabase.json');
+
+    mongoose.connect(databaseConfigs.dbUrl, {useNewUrlParser : true}, (err) => {
         if (err != null) {
             console.log('An error occured.\n', err)
         } else {
             console.log('Mongo db connected.');
         }
     });
+
     app.get('/api/v1/characters', (req, res) => {
         res.send(listFromMongo);
     });
