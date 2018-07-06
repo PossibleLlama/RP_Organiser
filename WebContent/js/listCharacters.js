@@ -1,8 +1,10 @@
 // Add get requests based on search criteria.
+// http://criticalhitpodcast.wikia.com/wiki/Characters
+
 module.exports = function(app) {
     listFromMongo = [{
         characterName : 'Torq',
-        playerName : 'Matthew',
+        playerName : 'Matthew Peterson',
         group: 'Critical Hit',
         campaign: ['Four Against the Void', 'Celestial Crusade', 'Lords of the Feywild'],
         characterClass : [{fighter : 1}],
