@@ -2,7 +2,7 @@
 // http://criticalhitpodcast.wikia.com/wiki/Characters
 
 module.exports = function(app, mongoose) {
-    var Character = mongoose.model('Character'), {
+    var Character = mongoose.model('Character', {
         characterName: String,
         playerName: String,
         group: String,
@@ -10,8 +10,8 @@ module.exports = function(app, mongoose) {
         characterClass: [{String, Number}],
         characterRace: String,
         characterSheet: [{String, String}],
-        description, String
-    };
+        notes: String
+    });
 
     listFromMongo = [{
         characterName : 'Torq',
@@ -20,7 +20,8 @@ module.exports = function(app, mongoose) {
         campaign: ['Four Against the Void', 'Celestial Crusade', 'Lords of the Feywild'],
         characterClass : [{fighter : 1}],
         characterRace : 'Half Orc',
-        description : 'I like funnel cakes. Hit \'em with the pointy end.'
+        characterSheet: [{'url': 'www.something.com'}],
+        notes : 'I like funnel cakes. Hit \'em with the pointy end.'
     }];
 
     var databaseConfigs = require('./../resources/mlabDatabase.json');
