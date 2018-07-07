@@ -23,7 +23,10 @@ module.exports = function(app, mongoose) {
     });
 
     app.get('/api/v1/characters', (req, res) => {
-        res.send(listFromMongo);
-        var character = new Character(res.body);
+        Character.find({}, (err, characters) =>{
+            if (err) res.sendStatus(500);
+            res.send(characters);
+            res.sendStatus(200);
+        });
     });
 }
