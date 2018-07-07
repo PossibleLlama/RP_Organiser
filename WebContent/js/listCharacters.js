@@ -1,5 +1,6 @@
 // Add get requests based on search criteria.
 // http://criticalhitpodcast.wikia.com/wiki/Characters
+var databaseConfigs = require('./../resources/mlabDatabase.json');
 
 module.exports = function(app, mongoose) {
     var Character = mongoose.model('Character', {
@@ -13,21 +14,8 @@ module.exports = function(app, mongoose) {
         notes: String
     });
 
-    listFromMongo = [{
-        characterName : 'Torq',
-        playerName : 'Matthew Peterson',
-        group: 'Critical Hit',
-        campaign: ['Four Against the Void', 'Celestial Crusade', 'Lords of the Feywild'],
-        characterClass : [{fighter : 1}],
-        characterRace : 'Half Orc',
-        characterSheet: [{'url': 'www.something.com'}],
-        notes : 'I like funnel cakes. Hit \'em with the pointy end.'
-    }];
-
-    var databaseConfigs = require('./../resources/mlabDatabase.json');
-
     mongoose.connect(databaseConfigs.dbUrl, {useNewUrlParser : true}, (err) => {
-        if (err != null) {
+        if (err) {
             console.log('An error occured.\n', err)
         } else {
             console.log('Mongo db connected.');
