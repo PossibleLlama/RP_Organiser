@@ -4,14 +4,14 @@ var databaseConfigs = require('./../resources/mlabDatabase.json');
 
 module.exports = function(app, mongoose) {
     var Character = mongoose.model('Character', {
-        characterName: String,
-        playerName: String,
-        group: String,
-        campaign: [String],
-        characterClass: [{String, Number}],
-        characterRace: String,
-        characterSheet: [{String, String}],
-        notes: String
+        'characterName': String,
+        'playerName': String,
+        'group': String,
+        'campaign': [String],
+        'characterClass': [{String, Number}],
+        'characterRace': String,
+        'characterSheet': [{String, String}],
+        'notes': String
     });
 
     mongoose.connect(databaseConfigs.dbUrl, {useNewUrlParser : true}, (err) => {
@@ -23,7 +23,7 @@ module.exports = function(app, mongoose) {
     });
 
     app.get('/api/v1/characters', (req, res) => {
-        Character.find({}, (err, characters) =>{
+        Character.find({}, (err, characters) => {
             if (err) res.sendStatus(500);
             res.send(characters);
             res.sendStatus(200);
