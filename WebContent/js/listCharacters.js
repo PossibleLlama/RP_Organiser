@@ -29,7 +29,6 @@ module.exports = function(app, mongoose) {
         Character.find({}, (err, characters) => {
             if (err) res.sendStatus(500);
             res.send(characters);
-            res.sendStatus(200);
         });
     });
 
