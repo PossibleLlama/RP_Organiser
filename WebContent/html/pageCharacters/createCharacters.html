@@ -103,14 +103,14 @@
 					<p>Quick and structured way to detail a character for future use.</p>
 				</div>
 
-                <div role="jumbotron" class="col-sm-12 col-md-10 col-md-push-1">
+				<div role="form" class="col-sm-12 col-md-10 col-md-push-1">
 					<form>
 						<h2>Character</h2>
 						<div class="form-group">
 							<input type="text" class="form-control" id="characterName" placeholder="Character Name">
 						</div>
 						<div class="checkbox">
-							<label><input type="checkbox">Player Character</label>
+							<label><input type="checkbox" id="isPlayerCharacter" onclick="togglePlayerCharacter()">Player Character</label>
 						</div>
 						<div id="pcOnly">
 							<!-- TODO Hide pc only until you know it is a player character -->
@@ -182,5 +182,17 @@
 		</div> <!-- Fluid container -->
 
 	</footer>
+
+	<script>
+	document.getElementById("pcOnly").style.display = 'none';
+
+	function togglePlayerCharacter() {
+		if (document.getElementById("isPlayerCharacter").checked) {
+			document.getElementById("pcOnly").style.display = 'initial';
+		} else {
+			document.getElementById("pcOnly").style.display = 'none';
+		}
+	}
+	</script>
 </body>
 </html>
