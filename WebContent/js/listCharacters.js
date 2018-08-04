@@ -31,4 +31,14 @@ module.exports = function(app, mongoose) {
             res.sendStatus(200);
         });
     });
+
+    app.post('/api/v1/characters', async (req, res) => {
+        try {
+            var character = new Character(req.body);
+            await character.save();
+            res.sendStatus(201);
+        } catch (err) {
+            res.sendStatus(500);
+        }
+    });
 }
