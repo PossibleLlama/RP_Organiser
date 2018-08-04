@@ -17,6 +17,7 @@ module.exports = function(app, mongoose) {
         'characterName': String,
         'playerName': String,
         'group': String,
+        'system': String,
         'campaign': [String],
         'characterClass': [{String, Number}],
         'characterRace': String,
