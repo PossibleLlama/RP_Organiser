@@ -31,8 +31,9 @@
 		- Page
 		- Element
 	-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"  crossorigin="anonymous"></script>
 	<script src="../../js/global.js" defer></script>
 	<!-- <script src="#" defer></script> -->
 </head>
@@ -132,6 +133,8 @@
 						</div>
 						<div class="form-group">
 							<!-- TODO Drop down box? -->
+							<!-- TODO Allow adding multi classes-->
+							<!-- TODO Specifying what level of the class -->
 							<input type="text" class="form-control" id="characerClass" placeholder="Characer Class">
 						</div>
 						<div class="form-group">
@@ -142,9 +145,9 @@
 							<input type="url" class="form-control" id="characterSheet" placeholder="Character Sheet">
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" id="notes" placeholder="Notes">
+							<textarea type="text" class="form-control" id="notes" placeholder="Notes"></textarea>
 						</div>
-						<button type="submit" class="btn btn-default">Submit</button>
+						<button id="send" class="btn btn-default">Submit</button>
 					</form>
 				</div>
 			</div> <!-- Row -->
@@ -193,6 +196,7 @@
 			document.getElementById("pcOnly").style.display = 'none';
 		}
 	}
+
 	</script>
 </body>
 </html>
