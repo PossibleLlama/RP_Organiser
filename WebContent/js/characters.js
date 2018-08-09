@@ -14,15 +14,22 @@ module.exports = function(app, mongoose) {
     mongoose.Promise = Promise;
 
     var Character = mongoose.model('Character', {
-        'characterName': String,
-        'playerName': String,
-        'group': String,
-        'system': String,
-        'campaign': [String],
-        'characterClass': [{String, Number}],
-        'characterRace': String,
-        'characterSheet': [{String, String}],
-        'notes': String
+        characterName: String,
+        playerName: String,
+        group: String,
+        system: String,
+        campaign: [String],
+        characterClass: [{
+            class: String,
+            level: Number
+        }],
+        characterRace: String,
+        characterSheet: [{
+            url: String,
+            level: Number,
+            version: Number
+        }],
+        notes: String
     });
 
     app.get('/api/v1/characters', (req, res) => {
