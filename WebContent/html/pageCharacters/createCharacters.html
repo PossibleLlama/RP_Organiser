@@ -187,6 +187,45 @@
 	</footer>
 
 	<script>
+	$(() => {
+		$("#send").click(() => {
+			character = populateCharacter();
+			$.post('http://localhost:3000/api/v1/characters', character);
+		});
+	});
+
+	function populateCharacter() {
+		var player = "Dungeon Master";
+		if ($("#isPlayerCharacter").is(":checked")) {
+			player = $("#playerName").val();
+		}
+
+		var character = {
+			characterName: $("#characterName").val(),
+			playerName: player,
+			group: $("#group").val(),
+			system: $("#system").val(),
+			campaign: $("#campaign").val(),
+			characterClass: [],
+			characterRace: $("#characterRace").val(),
+			characterSheet: [],
+			notes: $("#notes").val()
+		};
+
+		character.characterClass.push({
+			class: $("#characterClass").val(),
+			level: 1
+		});
+
+		character.characterSheet.push({
+			url: $("#characterSheet").val(),
+			level: 1,
+			version: 1 // TODO Increment from existing
+		});
+
+		return character;
+	}
+
 	document.getElementById("pcOnly").style.display = 'none';
 
 	function togglePlayerCharacter() {
