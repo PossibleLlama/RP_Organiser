@@ -24,11 +24,11 @@ module.exports = function(app, mongoose) {
             level: Number
         }],
         characterRace: String,
-        characterSheet: [{
+        characterSheet: {
             url: String,
             level: Number,
             version: Number
-        }],
+        },
         notes: String
     });
 
