@@ -20,15 +20,15 @@ module.exports = function(app, mongoose) {
         system: String,
         campaign: [String],
         characterClass: [{
-            class: String,
+            charClass: String,
             level: Number
         }],
         characterRace: String,
-        characterSheet: {
+        characterSheet: [{
             url: String,
             level: Number,
             version: Number
-        },
+        }],
         notes: String
     });
 
