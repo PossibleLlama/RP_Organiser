@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: mongo
+    restart: always
+
+  charactersapi:
+    build: Apis/Characters/
+    ports:
+      - "8001:5000"
+    command: npm start
