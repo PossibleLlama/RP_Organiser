@@ -4,4 +4,5 @@ COPY . /src
 WORKDIR /src
 
 RUN npm install
+RUN npm test
 CMD ["npm", "start"]

@@ -4,7 +4,7 @@
   "description": "Perform actions related to all characters",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jasmine",
     "start": "node index.js"
   },
   "repository": {
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/PossibleLlama/RP_Organiser#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "jasmine": "^3.3.0",
     "mongoose": "^5.2.7"
-}
+  }
 }
