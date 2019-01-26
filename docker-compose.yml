@@ -3,8 +3,13 @@ services:
   db:
     image: mongo
     restart: always
+    ports:
+      - "27017:27017"
 
   charactersapi:
-    build: Apis/Characters/
+    build:
+      context: api
+      dockerfile: rpls.characters/Dockerfile
     ports:
       - "8001:5000"
+    command: ["java", "-jar", "characters.jar"]
