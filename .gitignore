@@ -6,7 +6,7 @@
 
 # Java
 *.jar
-*/target/
+*target/
 
 # Javascript
 node_modules/
