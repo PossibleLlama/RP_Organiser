@@ -14,8 +14,8 @@ public class Character {
         this.characterName = characterName;
     }
 
-    public Integer getId() {
-        return id;
+    public int getId() {
+        return id != null ? id : 0;
     }
 
     public String getCharacterName() {
