@@ -55,4 +55,11 @@ public class CharacterTest {
             // Error was thrown correctly
         }
     }
+
+    @Test
+    public void toStringGetsIdPlayerCharacterValues() {
+        String toString = new Character("player", "character").toString();
+        Assert.assertEquals("Character: " + "playercharacter".hashCode()
+                + ", Name: character, Player: player", toString);
+    }
 }
