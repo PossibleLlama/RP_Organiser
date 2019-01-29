@@ -8,10 +8,12 @@ public class Character {
     private String characterName;
 
     public Character(final String playerName, final String characterName) {
-        this.id = (playerName + characterName).hashCode();
-
+        if (playerName == null || playerName.equals(""))
+            throw new IllegalArgumentException("Player name must be non null and not empty.");
         this.playerName = playerName;
         this.characterName = characterName;
+
+        this.id = (playerName + characterName).hashCode();
     }
 
     public int getId() {
