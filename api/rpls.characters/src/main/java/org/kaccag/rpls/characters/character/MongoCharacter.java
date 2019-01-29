@@ -21,15 +21,13 @@ public class MongoCharacter extends Saveable<Character> {
 
         String username = System.getenv("RPLS_DB_USER");
         String password = System.getenv("RPLS_DB_PASS");
-        String usernamePassword = username == null || password == null ? "" : username + ":" + password;
+        String usernamePassword = username == null || password == null ? "" : username + ":" + password + "@";
 
-        String uri = "mongodb://" + usernamePassword + "@" + hostname + ":" + port + "/" + replicaSet;
+        String uri = "mongodb://" + usernamePassword + hostname + ":" + port + "/" + replicaSet;
 
         MongoClient mongoClient = new MongoClient(new MongoClientURI(uri));
         MongoDatabase db = mongoClient.getDatabase(databaseName);
         collection = db.getCollection(collectionName);
-
-        System.out.println("\n\nFinished connecting to db\n");
     }
 
     @Override
