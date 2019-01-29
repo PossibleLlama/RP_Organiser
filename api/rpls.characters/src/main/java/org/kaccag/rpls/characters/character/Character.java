@@ -7,7 +7,7 @@ public class Character {
     private String playerName;
     private String characterName;
 
-    public Character(final String playerName, final String characterName) {
+    private Character(final String playerName, final String characterName) {
         if (playerName == null || playerName.equals(""))
             throw new IllegalArgumentException("Player name must be non null and not empty.");
         if (characterName == null || characterName.equals(""))
@@ -34,5 +34,26 @@ public class Character {
     public String toString() {
         return String.format("Character: %s, Name: %s, Player: %s",
                 this.id, this.characterName, this.playerName);
+    }
+
+    static class Builder {
+        private String playerName;
+        private String characterName;
+
+        Builder() {}
+
+        Builder setPlayerName(final String playerName) {
+            this.playerName = playerName;
+            return this;
+        }
+
+        Builder setCharacterName(final String characterName) {
+            this.characterName = characterName;
+            return this;
+        }
+
+        Character build() {
+            return new Character(playerName, characterName);
+        }
     }
 }
