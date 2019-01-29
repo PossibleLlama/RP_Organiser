@@ -16,15 +16,15 @@ public class Character {
         this.id = (playerName + characterName).hashCode();
     }
 
-    public int getId() {
+    int getId() {
         return id != null ? id : 0;
     }
 
-    public String getCharacterName() {
+    String getCharacterName() {
         return characterName;
     }
 
-    public String getPlayerName() {
+    String getPlayerName() {
         return playerName;
     }
 

@@ -7,7 +7,7 @@ public class CharacterTest {
 
     @Test
     public void createCharacter() {
-        Character initial = new Character("player", "character");
+        new Character("player", "character");
     }
 
     @Test
@@ -19,16 +19,20 @@ public class CharacterTest {
     @Test
     public void createCharacterWithNullPlayerName() {
         try {
-            Character initial = new Character(null, "character");
+            new Character(null, "character");
             Assert.fail("Character should provide a non null player name");
-        } catch (IllegalArgumentException e) {}
+        } catch (IllegalArgumentException e) {
+            // Error was thrown correctly.
+        }
     }
 
     @Test
     public void createCharacterWithEmptyPlayerName() {
         try {
-            Character initial = new Character("", "character");
+            new Character("", "character");
             Assert.fail("Character should provide a non null player name");
-        } catch (IllegalArgumentException e) {}
+        } catch (IllegalArgumentException e) {
+            // Error was thrown correctly.
+        }
     }
 }
