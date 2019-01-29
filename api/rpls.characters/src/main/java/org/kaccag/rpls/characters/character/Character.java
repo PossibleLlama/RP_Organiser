@@ -10,6 +10,8 @@ public class Character {
     public Character(final String playerName, final String characterName) {
         if (playerName == null || playerName.equals(""))
             throw new IllegalArgumentException("Player name must be non null and not empty.");
+        if (characterName == null || characterName.equals(""))
+            throw new IllegalArgumentException("Character name must be non null and not empty.");
         this.playerName = playerName;
         this.characterName = characterName;
 

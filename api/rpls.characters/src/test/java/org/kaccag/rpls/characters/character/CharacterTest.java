@@ -35,4 +35,24 @@ public class CharacterTest {
             // Error was thrown correctly.
         }
     }
+
+    @Test
+    public void createNullCharacterName() {
+        try {
+            new Character("player", null);
+            Assert.fail("Character should provide a non null character name");
+        } catch (IllegalArgumentException e) {
+            // Error was thrown correctly
+        }
+    }
+
+    @Test
+    public void createEmptyCharacterName() {
+        try {
+            new Character("player", "");
+            Assert.fail("Character should provide a non empty character name");
+        } catch (IllegalArgumentException e) {
+            // Error was thrown correctly
+        }
+    }
 }
