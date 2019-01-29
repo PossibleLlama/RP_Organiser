@@ -17,7 +17,7 @@ public class CharacterTest {
     }
 
     @Test
-    public void createCharacterWithNullPlayerName() {
+    public void createNullPlayerName() {
         try {
             new Character(null, "character");
             Assert.fail("Character should provide a non null player name");
@@ -27,10 +27,10 @@ public class CharacterTest {
     }
 
     @Test
-    public void createCharacterWithEmptyPlayerName() {
+    public void createEmptyPlayerName() {
         try {
             new Character("", "character");
-            Assert.fail("Character should provide a non null player name");
+            Assert.fail("Character should provide a non empty player name");
         } catch (IllegalArgumentException e) {
             // Error was thrown correctly.
         }
